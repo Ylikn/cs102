@@ -14,19 +14,19 @@ def encrypt_vigenere(plaintext, keyword):
     ciphertext = ""
     abc = "abcdefghijklmnopqrstuvwxyz"
     for i in range(len(text)):
-        viz = ord(text[i])
-        gar = abc.find(key[i % len(key)])
-        if (97 <= viz <= 122):
-            if (97 <= viz + gar <= 122):
-                ciphertext += chr(viz + gar)
+        codef = ord(text[i])
+        codes = abc.find(key[i % len(key)])
+        if (97 <= codef <= 122):
+            if (97 <= codef + codes <= 122):
+                ciphertext += chr(codef + codes)
             else:
-                ciphertext += chr(viz + gar - 26)
+                ciphertext += chr(codef + codes - 26)
 
-        elif (65 <= viz <= 90):
-            if (65 <= viz + gar <= 90):
-                ciphertext += chr(viz + gar)
+        elif (65 <= codef <= 90):
+            if (65 <= codef + codes <= 90):
+                ciphertext += chr(codef + codes)
             else:
-                ciphertext += chr(viz + gar - 26)
+                ciphertext += chr(codef + codes - 26)
         else:
             ciphertext += text[i]
     return ciphertext
@@ -48,19 +48,19 @@ def decrypt_vigenere(ciphertext, keyword):
     plaintext = ""
     abc = "abcdefghijklmnopqrstuvwxyz"
     for i in range(len(text)):
-        viz = ord(text[i])
-        gar = abc.find(key[i % len(key)])
-        if (97 <= viz <= 122):
-            if (97 <= viz - gar <= 122):
-                plaintext += chr(viz - gar)
+        codef = ord(text[i])
+        codes = abc.find(key[i % len(key)])
+        if (97 <= codef <= 122):
+            if (97 <= codef - codes <= 122):
+                plaintext += chr(codef - codes)
             else:
-                plaintext += chr(viz - gar + 26)
+                plaintext += chr(codef - codes + 26)
 
-        elif (65 <= viz <= 90):
-            if (65 <= viz - gar <= 90):
-                plaintext += chr(viz - gar)
+        elif (65 <= codef <= 90):
+            if (65 <= codef - codes <= 90):
+                plaintext += chr(codef - codes)
             else:
-                plaintext += chr(viz - gar + 26)
+                plaintext += chr(codef - codes + 26)
         else:
             plaintext += text[i]
 
