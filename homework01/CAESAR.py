@@ -53,5 +53,3 @@ def decrypt_caesar(ciphertext, shift):
             plaintext += chr(ord(char)+alp-sp)
     return plaintext
 
-
-print(decrypt_caesar("jrbhglkwejbgukbelrg , , , , 11 12 4 35", 70))
