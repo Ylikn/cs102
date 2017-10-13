@@ -9,7 +9,6 @@ def encrypt_vigenere(plaintext, keyword):
     >>> encrypt_vigenere("ATTACKATDAWN", "LEMON")
     'LXFOPVEFRNHR'
     """
-    text = plaintext
     key = keyword.lower()
     ciphertext = ""
     abc = "abcdefghijklmnopqrstuvwxyz"
