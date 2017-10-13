@@ -13,16 +13,13 @@ def encrypt_caesar(plaintext, shift):
     sp = shift % 26
     for i in range(len(text)):
         char = text[i]
-        if char in '1234567890':
-            ciphertext += char
-            continue
         if not ((97 <= ord(char) <= 122) or (65 <= ord(char) <= 90)):
             ciphertext += char
             continue
         if (97 <= ord(char) + sp <= 122) or (65 <= ord(char) + sp <= 90):
             ciphertext += chr(ord(char) + sp)
         else:
-            ciphertext += chr(ord(char) + alp + sp)
+            ciphertext += chr(ord(char) - alp + sp)
     return ciphertext
 
 
@@ -41,9 +38,6 @@ def decrypt_caesar(ciphertext, shift):
     sp = shift % 26
     for i in range(len(text)):
         char = text[i]
-        if char in '1234567890':
-            plaintext += char
-            continue
         if not ((97 <= ord(char) <= 122) or (65 <= ord(char) <= 90)):
             plaintext += char
             continue
@@ -52,4 +46,3 @@ def decrypt_caesar(ciphertext, shift):
         else:
             plaintext += chr(ord(char)+alp-sp)
     return plaintext
-
