@@ -7,7 +7,6 @@ def encrypt_caesar(plaintext, shift):
     >>> encrypt_caesar("")
     ''
     """
-    text = str(plaintext)
     ciphertext = ""
     alp = 26
     sp = shift % 26
