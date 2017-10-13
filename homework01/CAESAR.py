@@ -32,7 +32,6 @@ def decrypt_caesar(ciphertext, shift):
     ''
     """
     text = str(ciphertext)
-    plaintext = ""
     alp = 26
     sp = shift % 26
     for i in range(len(text)):
