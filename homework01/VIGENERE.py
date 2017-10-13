@@ -43,7 +43,6 @@ def decrypt_vigenere(ciphertext, keyword):
     'ATTACKATDAWN'
     """
     text = str(ciphertext)
-    key = str(keyword).lower()
     plaintext = ""
     abc = "abcdefghijklmnopqrstuvwxyz"
     for i in range(len(text)):
