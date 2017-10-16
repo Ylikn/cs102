@@ -57,5 +57,4 @@ def decrypt_vigenere(ciphertext, keyword):
                 plaintext += chr(codef - codes + 26)
         else:
             plaintext += text[i]
-
     return plaintext
