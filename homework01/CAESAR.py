@@ -5,7 +5,6 @@ def encrypt_caesar(plaintext, shift):
     >>> encrypt_caesar("python")
     'sbwkrq'
     >>> encrypt_caesar("")
-    ''
     """
     alp = 26
     sp = shift % 26
@@ -28,7 +27,6 @@ def decrypt_caesar(ciphertext, shift):
     >>> decrypt_caesar("sbwkrq")
     'python'
     >>> decrypt_caesar("")
-    ''
     """
     alp = 26
     sp = shift % 26
