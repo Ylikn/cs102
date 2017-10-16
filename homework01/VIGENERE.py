@@ -9,8 +9,6 @@ def encrypt_vigenere(plaintext, keyword):
     >>> encrypt_vigenere("ATTACKATDAWN", "LEMON")
     'LXFOPVEFRNHR'
     """
-    key = keyword.lower()
-    ciphertext = ""
     abc = "abcdefghijklmnopqrstuvwxyz"
     for i in range(len(text)):
         codef = ord(text[i])
@@ -42,8 +40,6 @@ def decrypt_vigenere(ciphertext, keyword):
     >>> decrypt_vigenere("LXFOPVEFRNHR", "LEMON")
     'ATTACKATDAWN'
     """
-    text = str(ciphertext)
-    plaintext = ""
     abc = "abcdefghijklmnopqrstuvwxyz"
     for i in range(len(text)):
         codef = ord(text[i])
