@@ -105,20 +105,20 @@ def solve(grid):
 
 def check_solution(solution):
     for i in range(9):
-        var1 = set('123456789')
-        var2 = set('123456789')
-        var3 = set('123456789')
+        rot1 = set('123456789')
+        rot2 = set('123456789')
+        rot3 = set('123456789')
         row = set(get_row(solution, (i, 0)))
         col = set(get_col(solution, (0, i)))
-        var1 -= row
-        var2 -= col
-        if var1 and var2 != set():
+        rot1 -= row
+        rot2 -= col
+        if rot1 and rot2 != set():
             return False
     for i in range(3):
         for j in range(3):
             block = set(get_block(solution, (i, j)))
-            var3 -= block
-            if var3 != set():
+            rot3 -= block
+            if rot3 != set():
                 return False
     return True
 
