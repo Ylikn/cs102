@@ -1,6 +1,5 @@
 from pprint import pprint as pp
 import random
-from collections import Counter
 
 
 def read_sudoku(filename):
