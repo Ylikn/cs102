@@ -179,7 +179,3 @@ def plot_graph(user_id=config['VK_USER_ID']):
     g.vs['color'] = pal.get_many(clusters.membership)
 
     plot(g, **visual_style)
-
-
-plot_graph(6302090)
-plotly_messages_freq(count_dates_from_messages(messages_get_history(user_id=6302090, offset=0, count=200)))
