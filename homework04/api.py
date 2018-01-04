@@ -13,7 +13,6 @@ config = {
     'VK_ACCESS_TOKEN': 'dde31ee0dde31ee0dde31ee0bbdd83376addde3dde31ee087ae5b283c6b32ab94e97898',
     'PLOTLY_USERNAME': 'ylikn',
     'PLOTLY_API_KEY': 'YfJ6S9bxw40xduHsixez',
-    'VK_USER_ID': 6302090,
     'DOMAIN': 'https://api.vk.com/method'
 }
 
