@@ -54,4 +54,3 @@ def get_news(url, n_pages=1):
 
 def split_row(string):
     return list(filter(None, re.split('\W|\d', string)))
-
