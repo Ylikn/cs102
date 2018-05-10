@@ -32,6 +32,11 @@ WHERE plane_type.speed > 950 AND workers.fio LIKE '%$input_1%' ";
 	
 	
 $result = mysqli_query($link, $query);
+if(mysqli_num_rows($result) == 0)
+{
+echo 'Данных нет';
+}
+	
 echo "<table border = 1 align=center><tr><td>ФИО сотрудника</td><td>Номер самолета</td><td>Скорость самолета</td></tr>";
 while($row = mysqli_fetch_array($result)) 
 {
